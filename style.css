@@ -11,7 +11,7 @@ html,body {
 }
   
 .top-section {
-  flex-basis: 30%;
+  flex-basis: 25%;
   background-color: #496ba3;
   color: #FAF8F1;
   display: flex;
@@ -21,10 +21,9 @@ html,body {
 
 .title {
   display: flex;
+  text-align: center;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: -100px;
   margin-bottom: 2%;
 }
 
@@ -47,30 +46,36 @@ html,body {
   width: 100%;
   height: 15%; 
   background-color: #FAF8F1;
-  font-size: 12px;
   color: #496ba3;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  
 }
 
 .bottom-section {
-  flex-basis: 70%;
+  flex-basis: 75%;
+  margin-top: 2% ;
 }
 
 .reset-game {
   position: relative;
   display:  flex;
-  margin-left: 30% ;
+  justify-content: center;
+  text-align: center;
   height: 100%;
+  padding: 10%;
 }
 
 .game-modes {
   position: relative;
   display: flex;
-  margin-left: 18%;
+  justify-content: center;
+  text-align: center;
   height: 100%;
   justify-content: space-between;
-  width: 12.8% ;
+  padding: 10%;
 }
 
 .reset-game button {
@@ -89,6 +94,7 @@ html,body {
   font-weight: 600;
   font-size: 16px;
   transition: all 0.4s;
+  margin-left: 2%;
 }
 
 .reset-game button:hover {
@@ -106,13 +112,38 @@ html,body {
 }
 
 
-#btn {
-  width: 10%;
-  height: 30%;
-  bottom: 0;
-  border-radius: 10%;
-  border: 3px solid white;
-  background-color: yellow;
-  margin-left: 30%;
+#color-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  border: 3px solid;
+  margin-left: 1%;
+  margin-bottom: 8px;
 }
-  
+
+.top-row,
+.middle-row,
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media (max-width: 1040px) {
+  .title h1{
+    font-size: 49px;
+  }
+  .title h3{
+    font-size: 28px;
+  }
+  .game-modes{
+    padding: 3%;
+  }
+  .reset-game{
+    padding: 3%;
+  }
+}
+
+
