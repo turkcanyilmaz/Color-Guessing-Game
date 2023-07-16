@@ -8,8 +8,11 @@ const randomColor = () => {
 const title = document.querySelector("h1");
 const midSection = document.querySelectorAll(".middle-section button");
 const buttons = document.querySelectorAll(".bottom-section button")
-
-
+const mediumButtons = document.querySelectorAll(".bottom-section .middle-row button")
+const hardButtons = document.querySelectorAll(".bottom-section .bottom-row button")
+const easyMode = document.querySelector(".middle-section .game-modes #easy-btn")
+const mediumMode = document.querySelector(".middle-section .game-modes #medium-btn")
+const hardMode = document.querySelector(".middle-section .game-modes #hard-btn")
 
 
 midSection.forEach((button) => {
@@ -26,12 +29,52 @@ buttons.forEach((button) => {
     button.style.backgroundColor = randomColor();
 })
 
-// For loop of mid section
+mediumButtons.forEach((button) => {
+    button.style.display = "none";
+})
 
-/* for (let i = 0; i < midSection.length; i++) {
-    const button = midSection[i];
-    button.addEventListener("click", function() {
-        title.innerText = randomColor();
+hardButtons.forEach((button) => {
+    button.style.display = "none";
+})
+
+easyMode.addEventListener("click", function () {
+    mediumButtons.forEach((button) => {
+        button.style.display = "none";
+    })
+    hardButtons.forEach((button) => {
+        button.style.display = "none";
+    })
+})
+
+mediumMode.addEventListener("click", function () {
+    mediumButtons.forEach((button) => {
+        button.style.display = "flex";
     });
-} */
+    hardButtons.forEach((button) => {
+        button.style.display = "none";
+    })
+});
+
+hardMode.addEventListener("click", function () {
+    mediumButtons.forEach((button) => {
+        button.style.display = "flex";
+    });
+    hardButtons.forEach((button) => {
+        button.style.display = "flex";
+    });
+});
+
+
+/* mediumMode.addEventListener("click", function () {
+    mediumButtons.forEach((button) => {
+        button.style.display = "flex";
+    })
+})
+
+hardMode.addEventListener("click", function () {
+    hardButtons.forEach((button) => {
+        button.style.display = "flex";
+    })
+}) */
+
 
