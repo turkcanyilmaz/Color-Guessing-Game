@@ -34,10 +34,12 @@ html,body {
 
 .title h1 {
   font-size: 70px;
+  font-weight: 300;
 }
 
 .title h3 {
   font-size: 40px;
+  font-weight: 200;
 }
 
 .middle-section {
@@ -85,6 +87,7 @@ html,body {
   font-weight: 600;
   font-size: 16px;
   transition: all 0.4s;
+  cursor: pointer;
 }
 
 .game-modes button {
@@ -95,24 +98,20 @@ html,body {
   font-size: 16px;
   transition: all 0.4s;
   margin-left: 2%;
+  cursor: pointer;
 }
 
 .reset-game button:hover {
   background-color: #496ba3;
   color: #faf8f1;
 }
-.game-modes button:hover {
-  background-color: #496ba3;
-  color: #faf8f1;
-}
 
-.game-modes .selected-btn {
+#easy-btn {
   background-color: #496ba3;
   color: #FAF8F1;
 }
 
-
-#color-btn {
+.color-btn {
   width: 150px;
   height: 150px;
   border-radius: 20%;
@@ -128,8 +127,6 @@ html,body {
   justify-content: center;
   align-items: center;
 }
-
-
 
 @media (max-width: 1040px) {
   .title h1{
